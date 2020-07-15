@@ -1,0 +1,11 @@
+{
+    "name": "Math",
+    "thumbnail": "",
+    "description": "",
+    "url": "/wiki/math",
+    "content": [{
+        "type": "title",
+        "content": "Working wiki works!"
+    }],
+    "function": ""
+}

@@ -1,0 +1,50 @@
+[
+
+    {
+        "name": "Home",
+        "thumbnail": "",
+        "description": "Homepage",
+        "url": "/wiki/home",
+        "loaded": true,
+        "content": [{
+            "type": "title",
+            "content": "Working wiki works!"
+        }]
+    },
+    {
+        "name": "Math",
+        "thumbnail": "",
+        "description": "",
+        "url": "/wiki/math",
+        "loaded": false,
+        "list": [{
+                "name": "Add",
+                "thumbnail": "",
+                "description": "",
+                "url": "/wiki/math/add",
+                "loaded": false
+            },
+            {
+                "name": "Subtract",
+                "thumbnail": "",
+                "description": "",
+                "url": "/wiki/math/subtract",
+                "loaded": false
+            },
+            {
+                "name": "Multiply",
+                "thumbnail": "",
+                "description": "",
+                "url": "/wiki/math/multiply",
+                "loaded": false
+            },
+            {
+                "name": "Devide",
+                "thumbnail": "",
+                "description": "",
+                "url": "/wiki/math/devide",
+                "loaded": false
+            }
+        ]
+    }
+]

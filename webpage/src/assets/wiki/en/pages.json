@@ -1,0 +1,13 @@
+{
+    "home": {
+        "name": "Home",
+        "thumbnail": "",
+        "description": "Homepage",
+        "url": "home",
+        "loaded": true,
+        "content": [{
+            "type": "title",
+            "content": "Working wiki works!"
+        }]
+    }
+}
