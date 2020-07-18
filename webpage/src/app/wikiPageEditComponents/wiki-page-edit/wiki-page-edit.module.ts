@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { WikiPageRoutingModule } from './wiki-routing.module';
+import { WikiPageEditPageRoutingModule } from './wiki-page-edit-routing.module';
 
-import { WikiPage } from './wiki.page';
-import { ComponentsModule } from '../components.module';
+import { WikiPageEditPage } from './wiki-page-edit.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    WikiPageRoutingModule,
-    ComponentsModule
+    WikiPageEditPageRoutingModule
   ],
-  declarations: [WikiPage]
+  declarations: [WikiPageEditPage]
 })
-export class WikiPageModule {}
+export class WikiPageEditPageModule {}

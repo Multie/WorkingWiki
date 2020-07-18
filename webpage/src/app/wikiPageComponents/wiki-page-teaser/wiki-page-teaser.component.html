@@ -1,18 +1,9 @@
-<ion-header>
-
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-        <ion-title>{{page.name}}</ion-title>
-    </ion-toolbar>
-</ion-header>
-
-<ion-content>
-    <div *ngFor="let element of page.content">
+<div class="root">
+    <div class="components" *ngFor="let element of content.elements">
         <app-wiki-page-title class="components" [content]="element" *ngIf="element.type=='title'"></app-wiki-page-title>
         <app-wiki-page-text class="components" [content]="element" *ngIf="element.type=='text'"></app-wiki-page-text>
         <app-wiki-page-image class="components" [content]="element" *ngIf="element.type=='image'"></app-wiki-page-image>
         <app-wiki-page-teaser class="components" [content]="element" *ngIf="element.type=='teaser'"></app-wiki-page-teaser>
+
     </div>
-</ion-content>
+</div>

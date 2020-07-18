@@ -4,47 +4,43 @@
         "name": "Home",
         "thumbnail": "",
         "description": "Homepage",
-        "url": "/wiki/home",
-        "loaded": true,
-        "content": [{
-            "type": "title",
-            "content": "Working wiki works!"
-        }]
+        "url": "/wiki/home"
     },
     {
         "name": "Math",
         "thumbnail": "",
         "description": "",
         "url": "/wiki/math",
-        "loaded": false,
         "list": [{
                 "name": "Add",
                 "thumbnail": "",
                 "description": "",
-                "url": "/wiki/math/add",
-                "loaded": false
+                "url": "/wiki/math/add"
             },
             {
                 "name": "Subtract",
                 "thumbnail": "",
                 "description": "",
-                "url": "/wiki/math/subtract",
-                "loaded": false
+                "url": "/wiki/math/subtract"
             },
             {
                 "name": "Multiply",
                 "thumbnail": "",
                 "description": "",
-                "url": "/wiki/math/multiply",
-                "loaded": false
+                "url": "/wiki/math/multiply"
             },
             {
                 "name": "Devide",
                 "thumbnail": "",
                 "description": "",
-                "url": "/wiki/math/devide",
-                "loaded": false
+                "url": "/wiki/math/devide"
             }
         ]
+    },
+    {
+        "name": "Editor",
+        "thumbnail": "",
+        "description": "Editor",
+        "url": "/editor"
     }
 ]

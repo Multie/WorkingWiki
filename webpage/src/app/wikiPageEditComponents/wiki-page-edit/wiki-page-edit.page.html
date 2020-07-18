@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Wiki Page Editor</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-list-header>
+            <ion-label>Page</ion-label>
+        </ion-list-header>
+        <ion-item>
+            <ion-label>Name</ion-label>
+            <ion-input type="text" [(ngModel)]="page.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Description</ion-label>
+            <ion-input type="text" [(ngModel)]="page.description"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Url</ion-label>
+            <ion-input type="url" [(ngModel)]="page.url"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Thumbnail</ion-label>
+            <!--ToDo: Image Input-->
+        </ion-item>
+        <ion-list-header>
+            <ion-label>Content</ion-label>
+            <ion-select (ionChange)="addContentEvent()" [(ngModel)]="addContentValue" interface="popover" placeholder="Add Component">
+                <ion-select-option value="title">Title</ion-select-option>
+                <ion-select-option value="text">Text</ion-select-option>
+                <ion-select-option value="image">Image</ion-select-option>
+                <ion-select-option value="teaser">Teaser</ion-select-option>
+            </ion-select>
+        </ion-list-header>
+        <div *ngFor="let element of page.content">
+            {{element.type}}
+        </div>
+    </ion-list>
+</ion-content>
