@@ -3,6 +3,7 @@
     "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png",
     "description": "Homepage",
     "url": "/wiki/home",
+    "version": 1,
     "content": [{
             "type": "title",
             "title": "Working wiki works!"
@@ -36,5 +37,5 @@
             ]
         }
     ],
-    "function": ""
+    "function": "var result = 0;data.forEach(element => {result += element;});"
 }

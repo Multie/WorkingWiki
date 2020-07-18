@@ -4,6 +4,7 @@ export class WikiServiceMenuEntry {
   thumbnail: string;
   description: string;
   list: Array<WikiServiceMenuEntry>;
+  version:number;
   constructor() {
     this.name = "";
     this.thumbnail = "";
@@ -16,6 +17,7 @@ export class WikiServicePage extends WikiServiceMenuEntry {
   function: string;
   constructor() {
     super();
+    this.content = [];
   }
 }
 export class WikiServicePageContent {

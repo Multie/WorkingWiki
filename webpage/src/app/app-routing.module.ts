@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    loadChildren: () => import('./wiki/wiki.module').then( m => m.WikiPageModule),
+    loadChildren: () => import('./wikiPageComponents/wiki/wiki.module').then( m => m.WikiPageModule),
   },
 
   

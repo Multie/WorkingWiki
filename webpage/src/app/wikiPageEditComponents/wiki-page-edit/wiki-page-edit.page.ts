@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { WikiServicePage, WikiServicePageContent } from 'src/app/wikiClasses';
+import { WikiServicePage, WikiServicePageContent, WikiServicePageContentTitle, WikiServicePageContentImage, WikiServicePageContentText } from 'src/app/wikiClasses';
 import { WikiService } from 'src/app/wiki.service';
+import { cpus } from 'os';
 
 @Component({
   selector: 'app-wiki-page-edit',
@@ -11,10 +12,10 @@ import { WikiService } from 'src/app/wiki.service';
 export class WikiPageEditPage implements OnInit {
 
   page: WikiServicePage;
-
+  OutputText:string;
   constructor(private activatedRoute: ActivatedRoute, private wiki: WikiService) {
     this.page = new WikiServicePage();
-
+    this.OutputText = "";
   }
 
   ngOnInit() {
@@ -24,6 +25,9 @@ export class WikiPageEditPage implements OnInit {
       if (url != undefined) {
         this.wiki.getPage(url).then(value => {
           this.page = value;
+          if (this.page.content == null) {
+            this.page.content = [];
+          }
         });
       }
     });
@@ -34,8 +38,36 @@ export class WikiPageEditPage implements OnInit {
   addContentEvent() {
     console.log("change:" + this.addContentValue);
     var ele = new WikiServicePageContent();
-    ele.type = this.addContentValue;
+    switch (this.addContentValue) {
+      case "title":
+        ele = new WikiServicePageContentTitle();
+        break;
+      case "text":
+        ele = new WikiServicePageContentText();
+        break;
+      case "image":
+        ele = new WikiServicePageContentImage();
+        break;
+      case "teaser":
+        ele = new WikiServicePageContentTitle();
+        break;
+    }
     this.page.content.push(ele);
     this.addContentValue = "";
+    console.log(this.page);
+  }
+
+  
+  stringifyPage() {
+    this.OutputText = JSON.stringify(this.page);
+  }
+  parsePage() {
+    var parsed:WikiServicePage = JSON.parse(this.OutputText);
+    if (parsed != null) {
+      this.page = parsed;
+    }
+  }
+  storePage() {
+    
   }
 }

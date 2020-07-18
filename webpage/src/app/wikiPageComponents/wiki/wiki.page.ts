@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { WikiService  } from '../wiki.service';
-import { WikiServicePage } from '../wikiClasses';
+import { WikiService  } from '../../wiki.service';
+import { WikiServicePage } from '../../wikiClasses';
 
 @Component({
   selector: 'app-wiki',

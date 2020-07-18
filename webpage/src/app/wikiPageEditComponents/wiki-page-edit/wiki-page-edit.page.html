@@ -25,6 +25,10 @@
             <ion-label>Thumbnail</ion-label>
             <!--ToDo: Image Input-->
         </ion-item>
+        <ion-item>
+            <ion-label>Function</ion-label>
+            <ion-input type="text" [(ngModel)]="page.function"></ion-input>
+        </ion-item>
         <ion-list-header>
             <ion-label>Content</ion-label>
             <ion-select (ionChange)="addContentEvent()" [(ngModel)]="addContentValue" interface="popover" placeholder="Add Component">
@@ -35,7 +39,25 @@
             </ion-select>
         </ion-list-header>
         <div *ngFor="let element of page.content">
-            {{element.type}}
+            <app-wiki-page-edit-title [content]="element" *ngIf="element.type=='title'"></app-wiki-page-edit-title>
+            <app-wiki-page-edit-text [content]="element" *ngIf="element.type=='text'"></app-wiki-page-edit-text>
+            <app-wiki-page-edit-image [content]="element" *ngIf="element.type=='image'"></app-wiki-page-edit-image>
+            <app-wiki-page-edit-teaser [content]="element" *ngIf="element.type=='teaser'"></app-wiki-page-edit-teaser>
         </div>
+        <ion-list-header>
+            <ion-label>
+                Output
+            </ion-label>
+            <ion-button (click)="stringifyPage()">
+                Stringify
+            </ion-button>
+            <ion-button (click)="parsePage()">
+                Parse
+            </ion-button>
+            <ion-button (click)="storePage()">
+                Store
+            </ion-button>
+        </ion-list-header>
+        <ion-textarea [(ngModel)]="OutputText"></ion-textarea>
     </ion-list>
 </ion-content>

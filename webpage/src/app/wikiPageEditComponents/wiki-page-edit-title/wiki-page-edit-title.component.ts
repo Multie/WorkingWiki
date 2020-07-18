@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { WikiServicePageContent, WikiServicePageContentTitle } from 'src/app/wikiClasses';
 
 @Component({
   selector: 'app-wiki-page-edit-title',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WikiPageEditTitleComponent implements OnInit {
 
-  constructor() { }
+  @Input() content:WikiServicePageContentTitle;
 
-  ngOnInit() {}
+  constructor() { 
+
+  }
+
+  ngOnInit() {
+
+  }
 
 }

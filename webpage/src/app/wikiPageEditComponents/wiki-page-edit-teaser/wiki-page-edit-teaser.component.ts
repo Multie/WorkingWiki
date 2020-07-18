@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { WikiServicePageContentTeaser } from 'src/app/wikiClasses';
 
 @Component({
   selector: 'app-wiki-page-edit-teaser',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wiki-page-edit-teaser.component.scss'],
 })
 export class WikiPageEditTeaserComponent implements OnInit {
+
+  @Input() content:WikiServicePageContentTeaser;
+
 
   constructor() { }
 

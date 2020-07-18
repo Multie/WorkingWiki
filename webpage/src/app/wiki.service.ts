@@ -19,12 +19,16 @@ export class WikiService {
   constructor(private http: HttpClient) {
     //this.pages["test"] = true;
     this.language = navigator.language;
-    //this.loadPages();
+    this.loadPages();
     this.getMenuEntrys();
 
-
+    /* Function:
+      Input is a javascript object
+      Output must be named result
+      result is allways returnd
+    */
     //var test = new WikiServicePage();
-    //test.function = "var erg = 0;data.forEach(element => {erg += element;});return erg;";
+    //test.function = "var result = 0;data.forEach(element => {result += element;});";
     //console.log(this.runPageFunction(test,[100,2]));
   }
 
@@ -104,7 +108,7 @@ export class WikiService {
   }
 
   runPageFunction(page: WikiServicePage, data) {
-    var func = Function('"use strict";return ({ func:function(data){' + page.function + '} })')();
+    var func = Function('"use strict";return ({ func:function(data){' + page.function + ' return result} })')();
     return func.func(data);
     
   }

@@ -1,3 +1,11 @@
-<p>
-  wiki-page-edit-teaser works!
-</p>
+<ion-list-header>
+    <ion-label>
+        Teaser
+    </ion-label>
+</ion-list-header>
+<div *ngFor="let element of content.elements">
+    <app-wiki-page-edit-title [content]="element" *ngIf="element.type=='title'"></app-wiki-page-edit-title>
+    <app-wiki-page-edit-text [content]="element" *ngIf="element.type=='text'"></app-wiki-page-edit-text>
+    <app-wiki-page-edit-image [content]="element" *ngIf="element.type=='image'"></app-wiki-page-edit-image>
+    <app-wiki-page-edit-teaser [content]="element" *ngIf="element.type=='teaser'"></app-wiki-page-edit-teaser>
+</div>

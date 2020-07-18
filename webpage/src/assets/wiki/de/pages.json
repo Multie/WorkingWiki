@@ -4,35 +4,41 @@
         "name": "Home",
         "thumbnail": "",
         "description": "Homepage",
-        "url": "/wiki/home"
+        "url": "/wiki/home",
+        "version": 1
     },
     {
         "name": "Math",
         "thumbnail": "",
         "description": "",
         "url": "/wiki/math",
+        "version": 1,
         "list": [{
                 "name": "Add",
                 "thumbnail": "",
                 "description": "",
+                "version": 1,
                 "url": "/wiki/math/add"
             },
             {
                 "name": "Subtract",
                 "thumbnail": "",
                 "description": "",
+                "version": 1,
                 "url": "/wiki/math/subtract"
             },
             {
                 "name": "Multiply",
                 "thumbnail": "",
                 "description": "",
+                "version": 1,
                 "url": "/wiki/math/multiply"
             },
             {
                 "name": "Devide",
                 "thumbnail": "",
                 "description": "",
+                "version": 1,
                 "url": "/wiki/math/devide"
             }
         ]
@@ -40,6 +46,7 @@
     {
         "name": "Editor",
         "thumbnail": "",
+        "version": 1,
         "description": "Editor",
         "url": "/editor"
     }

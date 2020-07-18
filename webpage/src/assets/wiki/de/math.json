@@ -3,6 +3,7 @@
     "thumbnail": "",
     "description": "",
     "url": "/wiki/math",
+    "version": 1,
     "content": [{
         "type": "title",
         "content": "Working wiki works!"
